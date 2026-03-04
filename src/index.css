@@ -44,6 +44,12 @@
     --btn-green: 150 55% 38%;
     --btn-green-hover: 150 55% 32%;
     --btn-green-foreground: 0 0% 100%;
+    --orange: 28 90% 52%;
+    --orange-foreground: 0 0% 100%;
+    --orange-hover: 28 90% 45%;
+    --dark-surface: 220 15% 13%;
+    --dark-surface-foreground: 40 30% 96%;
+    --rank-gold: 40 90% 50%;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
