@@ -1,14 +1,48 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useOutletContext } from "react-router-dom";
+import Hero from "@/components/Hero";
+import SectionTitle from "@/components/SectionTitle";
+import CardGrid from "@/components/CardGrid";
+import CountrySelector from "@/components/CountrySelector";
+import type { Country } from "@/hooks/useCountry";
 
-const Index = () => {
+import cardGuias from "@/assets/card-guias.jpg";
+import cardTrucos from "@/assets/card-trucos.jpg";
+import cardComoJugar from "@/assets/card-como-jugar.jpg";
+
+interface Ctx {
+  selected: Country;
+  selectByCode: (code: string) => void;
+  countries: Country[];
+}
+
+const escuelaCards = [
+  { title: "Guías y Estrategias", description: "Tips y estrategias de apuestas", image: cardGuias, cta: "Aprende Más", href: "/apuestas" },
+  { title: "Trucos y Consejos", description: "Consejos para ganar en tus apuestas", image: cardTrucos, cta: "Ver Consejos", href: "/bonos" },
+  { title: "Cómo Jugar", description: "Tutoriales de Blackjack, slots y más", image: cardComoJugar, cta: "Ver Tutoriales", href: "/casinos" },
+];
+
+export default function Index() {
+  const { selected, selectByCode, countries } = useOutletContext<Ctx>();
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
-  );
-};
+    <>
+      <Hero country={selected} />
 
-export default Index;
+      <section className="container py-16">
+        <SectionTitle title="Escuela de Apuestas" subtitle="Aprende a jugar y apuesta como un experto" />
+        <div className="mt-10">
+          <CardGrid items={escuelaCards} />
+        </div>
+      </section>
+
+      <section className="bg-muted py-16">
+        <div className="container">
+          <SectionTitle title="Explora los Países" subtitle="Visita nuestras guías en todo Latinoamérica" />
+          <div className="mt-10">
+            <CountrySelector countries={countries} onSelectCountry={selectByCode} />
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
