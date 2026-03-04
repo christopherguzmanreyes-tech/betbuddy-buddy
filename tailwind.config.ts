@@ -65,6 +65,16 @@ export default {
           hover: "hsl(var(--btn-green-hover))",
           foreground: "hsl(var(--btn-green-foreground))",
         },
+        orange: {
+          DEFAULT: "hsl(var(--orange))",
+          foreground: "hsl(var(--orange-foreground))",
+          hover: "hsl(var(--orange-hover))",
+        },
+        "dark-surface": {
+          DEFAULT: "hsl(var(--dark-surface))",
+          foreground: "hsl(var(--dark-surface-foreground))",
+        },
+        "rank-gold": "hsl(var(--rank-gold))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
