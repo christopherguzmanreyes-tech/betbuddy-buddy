@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="bg-primary py-10 text-primary-foreground">
       <div className="container flex flex-col items-center gap-4 text-center text-sm">
         <Link to="/" className="font-heading text-lg font-black">
-          🎰 el <span className="text-cta">apuesta</span>BRO
+          🎰 el <span className="text-cta">aposta</span>BRO
         </Link>
         <nav className="flex flex-wrap justify-center gap-4 font-heading text-xs uppercase tracking-wide" aria-label="Pie de página">
           <Link to="/paises" className="hover:text-cta">Países</Link>

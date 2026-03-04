@@ -1,10 +1,22 @@
 [
   { "code": "mx", "name": "México", "flag": "🇲🇽" },
-  { "code": "ar", "name": "Argentina", "flag": "🇦🇷" },
+  { "code": "gt", "name": "Guatemala", "flag": "🇬🇹" },
+  { "code": "hn", "name": "Honduras", "flag": "🇭🇳" },
+  { "code": "sv", "name": "El Salvador", "flag": "🇸🇻" },
+  { "code": "ni", "name": "Nicaragua", "flag": "🇳🇮" },
+  { "code": "cr", "name": "Costa Rica", "flag": "🇨🇷" },
+  { "code": "pa", "name": "Panamá", "flag": "🇵🇦" },
+  { "code": "cu", "name": "Cuba", "flag": "🇨🇺" },
+  { "code": "rd", "name": "Rep. Dominicana", "flag": "🇩🇴" },
+  { "code": "pr", "name": "Puerto Rico", "flag": "🇵🇷" },
   { "code": "co", "name": "Colombia", "flag": "🇨🇴" },
-  { "code": "cl", "name": "Chile", "flag": "🇨🇱" },
-  { "code": "pe", "name": "Perú", "flag": "🇵🇪" },
-  { "code": "br", "name": "Brasil", "flag": "🇧🇷" },
+  { "code": "ve", "name": "Venezuela", "flag": "🇻🇪" },
   { "code": "ec", "name": "Ecuador", "flag": "🇪🇨" },
-  { "code": "uy", "name": "Uruguay", "flag": "🇺🇾" }
+  { "code": "pe", "name": "Perú", "flag": "🇵🇪" },
+  { "code": "bo", "name": "Bolivia", "flag": "🇧🇴" },
+  { "code": "cl", "name": "Chile", "flag": "🇨🇱" },
+  { "code": "py", "name": "Paraguay", "flag": "🇵🇾" },
+  { "code": "uy", "name": "Uruguay", "flag": "🇺🇾" },
+  { "code": "br", "name": "Brasil", "flag": "🇧🇷" },
+  { "code": "ar", "name": "Argentina", "flag": "🇦🇷" }
 ]

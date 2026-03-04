@@ -26,7 +26,7 @@ export default function Header({ countries, selected, onSelectCountry }: HeaderP
         <Link to="/" className="flex items-center gap-2 font-heading text-xl font-black tracking-tight md:text-2xl" aria-label="Inicio">
           <span>🎰</span>
           <span>
-            el <span className="text-cta">apuesta</span>BRO
+            el <span className="text-cta">aposta</span>BRO
           </span>
         </Link>
 
