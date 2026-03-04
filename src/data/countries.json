@@ -1,0 +1,10 @@
+[
+  { "code": "mx", "name": "México", "flag": "🇲🇽" },
+  { "code": "ar", "name": "Argentina", "flag": "🇦🇷" },
+  { "code": "co", "name": "Colombia", "flag": "🇨🇴" },
+  { "code": "cl", "name": "Chile", "flag": "🇨🇱" },
+  { "code": "pe", "name": "Perú", "flag": "🇵🇪" },
+  { "code": "br", "name": "Brasil", "flag": "🇧🇷" },
+  { "code": "ec", "name": "Ecuador", "flag": "🇪🇨" },
+  { "code": "uy", "name": "Uruguay", "flag": "🇺🇾" }
+]
