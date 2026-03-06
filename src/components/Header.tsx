@@ -1,13 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, Globe } from "lucide-react";
-import type { Country } from "@/hooks/useCountry";
-
-interface HeaderProps {
-  countries: Country[];
-  selected: Country;
-  onSelectCountry: (code: string) => void;
-}
+import { Menu, X, Trophy, CircleDot, Layers, Gamepad2 } from "lucide-react";
 
 const navItems = [
   { label: "Países", to: "/paises" },
@@ -16,13 +9,19 @@ const navItems = [
   { label: "Bonos", to: "/bonos" },
 ];
 
-export default function Header({ countries, selected, onSelectCountry }: HeaderProps) {
+const categories = [
+  { label: "Deportivas", icon: Trophy, to: "/apuestas" },
+  { label: "Ruleta", icon: CircleDot, to: "/casinos" },
+  { label: "Mesas", icon: Layers, to: "/casinos" },
+  { label: "Slots", icon: Gamepad2, to: "/casinos" },
+];
+
+export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 bg-header text-header-foreground shadow-lg">
       <div className="container flex items-center justify-between py-3">
-        {/* Logo */}
         <Link to="/" className="flex items-center gap-2 font-heading text-xl font-black tracking-tight md:text-2xl" aria-label="Inicio">
           <span>🎰</span>
           <span>
@@ -30,7 +29,6 @@ export default function Header({ countries, selected, onSelectCountry }: HeaderP
           </span>
         </Link>
 
-        {/* Desktop nav */}
         <nav className="hidden items-center gap-6 md:flex" aria-label="Navegación principal">
           {navItems.map((item) => (
             <Link key={item.to} to={item.to} className="font-heading text-sm font-semibold uppercase tracking-wide transition-colors hover:text-cta focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cta rounded">
@@ -39,28 +37,24 @@ export default function Header({ countries, selected, onSelectCountry }: HeaderP
           ))}
         </nav>
 
-        {/* Flags + Globe */}
-        <div className="hidden items-center gap-1 md:flex">
-          <Globe className="mr-1 h-5 w-5 text-cta" aria-hidden="true" />
-          {countries.slice(0, 5).map((c) => (
-            <button
-              key={c.code}
-              onClick={() => onSelectCountry(c.code)}
-              aria-label={`Seleccionar ${c.name}`}
-              className={`rounded px-1.5 py-0.5 text-lg transition-transform hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cta ${selected.code === c.code ? "bg-cta/20 scale-110" : ""}`}
+        <div className="hidden items-center gap-2 md:flex">
+          {categories.map((cat) => (
+            <Link
+              key={cat.label}
+              to={cat.to}
+              className="flex items-center gap-1.5 rounded-full border border-header-foreground/20 px-3 py-1 text-xs font-semibold uppercase tracking-wide transition-colors hover:border-cta hover:text-cta"
             >
-              {c.flag}
-            </button>
+              <cat.icon className="h-3.5 w-3.5" />
+              {cat.label}
+            </Link>
           ))}
         </div>
 
-        {/* Mobile toggle */}
         <button className="md:hidden rounded p-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cta" onClick={() => setOpen(!open)} aria-label={open ? "Cerrar menú" : "Abrir menú"}>
           {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
       </div>
 
-      {/* Mobile menu */}
       {open && (
         <div className="border-t border-header-foreground/10 bg-header md:hidden">
           <nav className="container flex flex-col gap-3 py-4" aria-label="Navegación móvil">
@@ -70,17 +64,17 @@ export default function Header({ countries, selected, onSelectCountry }: HeaderP
               </Link>
             ))}
           </nav>
-          <div className="container flex items-center gap-2 pb-4">
-            <Globe className="h-5 w-5 text-cta" aria-hidden="true" />
-            {countries.slice(0, 5).map((c) => (
-              <button
-                key={c.code}
-                onClick={() => { onSelectCountry(c.code); setOpen(false); }}
-                aria-label={`Seleccionar ${c.name}`}
-                className={`rounded px-1.5 py-0.5 text-lg ${selected.code === c.code ? "bg-cta/20" : ""}`}
+          <div className="container flex flex-wrap items-center gap-2 pb-4">
+            {categories.map((cat) => (
+              <Link
+                key={cat.label}
+                to={cat.to}
+                onClick={() => setOpen(false)}
+                className="flex items-center gap-1.5 rounded-full border border-header-foreground/20 px-3 py-1 text-xs font-semibold uppercase tracking-wide hover:border-cta hover:text-cta"
               >
-                {c.flag}
-              </button>
+                <cat.icon className="h-3.5 w-3.5" />
+                {cat.label}
+              </Link>
             ))}
           </div>
         </div>
