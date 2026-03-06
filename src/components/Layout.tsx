@@ -8,7 +8,7 @@ export default function Layout() {
 
   return (
     <div className="flex min-h-screen flex-col">
-      <Header countries={countries} selected={selected} onSelectCountry={selectByCode} />
+      <Header />
       <main className="flex-1">
         <Outlet context={{ selected, selectByCode, countries }} />
       </main>
