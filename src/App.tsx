@@ -7,7 +7,6 @@ import Layout from "@/components/Layout";
 import Index from "./pages/Index";
 import CountryPage from "./pages/CountryPage";
 import ListPage from "./pages/ListPage";
-import PaisesPage from "./pages/PaisesPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
