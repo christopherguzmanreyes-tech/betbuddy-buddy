@@ -21,7 +21,7 @@ const App = () => (
           <Route element={<Layout />}>
             <Route path="/" element={<Index />} />
             <Route path="/pais/:codigo" element={<CountryPage />} />
-            <Route path="/paises" element={<PaisesPage />} />
+            <Route path="/paises" element={<ListPage />} />
             <Route path="/casinos" element={<ListPage />} />
             <Route path="/apuestas" element={<ListPage />} />
             <Route path="/bonos" element={<ListPage />} />
