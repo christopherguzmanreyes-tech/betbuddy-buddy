@@ -2,7 +2,6 @@ import { useOutletContext } from "react-router-dom";
 import Hero from "@/components/Hero";
 import SectionTitle from "@/components/SectionTitle";
 import CardGrid from "@/components/CardGrid";
-import CountrySelector from "@/components/CountrySelector";
 import type { Country } from "@/hooks/useCountry";
 
 import cardGuias from "@/assets/card-guias.jpg";
@@ -22,7 +21,7 @@ const escuelaCards = [
 ];
 
 export default function Index() {
-  const { selected, selectByCode, countries } = useOutletContext<Ctx>();
+  const { selected } = useOutletContext<Ctx>();
 
   return (
     <>
@@ -32,15 +31,6 @@ export default function Index() {
         <SectionTitle title="Escuela de Apuestas" subtitle="Aprende a jugar y apuesta como un experto" />
         <div className="mt-10">
           <CardGrid items={escuelaCards} />
-        </div>
-      </section>
-
-      <section className="bg-muted py-16">
-        <div className="container">
-          <SectionTitle title="Explora los Países" subtitle="Visita nuestras guías en todo Latinoamérica" />
-          <div className="mt-10">
-            <CountrySelector countries={countries} onSelectCountry={selectByCode} />
-          </div>
         </div>
       </section>
     </>
