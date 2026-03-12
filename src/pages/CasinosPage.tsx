@@ -1,9 +1,9 @@
 import { useState } from "react";
 import SectionTitle from "@/components/SectionTitle";
 import CasinoCard from "@/components/CasinoCard";
-import { casinos, apuestas, bonos } from "@/data/casinos";
+import { casinos, apuestas, bonos, brands } from "@/data/casinos";
 import heroBg from "@/assets/hero-bg.jpg";
-import { ChevronDown, Search } from "lucide-react";
+import { ChevronDown, Search, Star } from "lucide-react";
 
 const filterTabs = ["Todos", "Bonos", "Métodos de pago", "Juegos en vivo", "Con App", "Crypto"] as const;
 
