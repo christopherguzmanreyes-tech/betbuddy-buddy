@@ -1,7 +1,7 @@
 import { useState } from "react";
 import SectionTitle from "@/components/SectionTitle";
 import CasinoCard from "@/components/CasinoCard";
-import { casinos, apuestas, bonos, brands } from "@/data/casinos";
+import { casinosLatam, apuestasLatam, cryptoCasinos, brands } from "@/data/casinos";
 import heroBg from "@/assets/hero-bg.jpg";
 import { ChevronDown, Search, Star } from "lucide-react";
 
@@ -82,37 +82,37 @@ export default function CasinosPage() {
         </div>
       </section>
 
-      {/* Top Casinos */}
+      {/* Mejores Casinos LATAM (licencia gris) */}
       <section className="bg-muted py-8">
         <div className="container">
-          <SectionTitle title="🏆 Top Casinos Online" subtitle="Los mejores casinos verificados y con licencia para LATAM" />
+          <SectionTitle title="🌎 Mejores Casinos que Operan en Todo LATAM" subtitle="Casinos con licencia internacional que aceptan jugadores de toda Latinoamérica" />
           <div className="mt-5 grid gap-4">
-            {casinos.map((c) => (
+            {casinosLatam.map((c) => (
               <CasinoCard key={c.rank} casino={c} />
             ))}
           </div>
         </div>
       </section>
 
-      {/* Apuestas */}
-      <section className="bg-muted py-8">
-        <div className="container">
-          <SectionTitle title="⚽ Mejores Casas de Apuestas" subtitle="Compara las mejores plataformas de apuestas deportivas" />
-          <div className="mt-5 grid gap-4">
-            {apuestas.map((c) => (
-              <CasinoCard key={c.rank} casino={c} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Bonos */}
+      {/* Mejores Casas de Apuestas LATAM (licencia gris) */}
       <section className="container py-8">
-        <SectionTitle title="🎁 Mejores Bonos de Casino" subtitle="Las ofertas y promociones más generosas del momento" />
+        <SectionTitle title="⚽ Mejores Casas de Apuestas en Todo LATAM" subtitle="Casas de apuestas deportivas con licencia internacional disponibles en toda la región" />
         <div className="mt-5 grid gap-4">
-          {bonos.map((c) => (
+          {apuestasLatam.map((c) => (
             <CasinoCard key={c.rank} casino={c} />
           ))}
+        </div>
+      </section>
+
+      {/* Mejores Cripto Casinos */}
+      <section className="bg-muted py-8">
+        <div className="container">
+          <SectionTitle title="₿ Mejores Cripto Casinos" subtitle="Casinos que aceptan Bitcoin, Ethereum y otras criptomonedas" />
+          <div className="mt-5 grid gap-4">
+            {cryptoCasinos.map((c) => (
+              <CasinoCard key={c.rank} casino={c} />
+            ))}
+          </div>
         </div>
       </section>
 
