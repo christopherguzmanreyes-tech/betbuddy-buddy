@@ -23,7 +23,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/pais/:codigo" element={<CountryPage />} />
             <Route path="/paises" element={<ListPage />} />
-            <Route path="/casinos" element={<ListPage />} />
+            <Route path="/casinos" element={<CasinosPage />} />
             <Route path="/apuestas" element={<ListPage />} />
             <Route path="/bonos" element={<ListPage />} />
           </Route>
