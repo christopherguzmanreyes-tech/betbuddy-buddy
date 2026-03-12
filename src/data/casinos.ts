@@ -1,6 +1,7 @@
 export interface Casino {
   rank: number;
   name: string;
+  slug: string;
   tagline: string;
   rating: number;
   bonus: string;
@@ -9,6 +10,13 @@ export interface Casino {
   games: number;
   hasApp: boolean;
   type: "casino" | "apuestas" | "bonos";
+}
+
+export interface CasinoBrand {
+  name: string;
+  slug: string;
+  logo: string;
+  color: string;
 }
 
 export const casinos: Casino[] = [
