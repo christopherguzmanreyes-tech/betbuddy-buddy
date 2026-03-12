@@ -1,9 +1,9 @@
 import { useState } from "react";
 import SectionTitle from "@/components/SectionTitle";
 import CasinoCard from "@/components/CasinoCard";
-import { casinos, apuestas, bonos } from "@/data/casinos";
+import { casinos, apuestas, bonos, brands } from "@/data/casinos";
 import heroBg from "@/assets/hero-bg.jpg";
-import { ChevronDown, Search } from "lucide-react";
+import { ChevronDown, Search, Star } from "lucide-react";
 
 const filterTabs = ["Todos", "Bonos", "Métodos de pago", "Juegos en vivo", "Con App", "Crypto"] as const;
 
@@ -59,13 +59,38 @@ export default function CasinosPage() {
         </div>
       </div>
 
-      {/* Top Casinos */}
+      {/* Casino Brands Logo Grid */}
       <section className="container py-8">
-        <SectionTitle title="🏆 Top Casinos Online" subtitle="Los mejores casinos verificados y con licencia para LATAM" />
-        <div className="mt-5 grid gap-4">
-          {casinos.map((c) => (
-            <CasinoCard key={c.rank} casino={c} />
+        <SectionTitle title="🎰 Nuestros Casinos Recomendados" subtitle="Las marcas más confiables y populares en Latinoamérica" />
+        <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5">
+          {brands.map((brand) => (
+            <a
+              key={brand.slug}
+              href={`#${brand.slug}`}
+              className="group flex flex-col items-center gap-3 rounded-xl border border-border bg-card p-5 transition-all hover:border-orange/50 hover:shadow-lg hover:shadow-orange/5"
+            >
+              <div className="flex h-20 w-20 items-center justify-center rounded-xl bg-muted p-3 transition-transform group-hover:scale-110">
+                <img src={brand.logo} alt={brand.name} className="h-full w-full object-contain" />
+              </div>
+              <span className="font-heading text-sm font-bold text-foreground">{brand.name}</span>
+              <div className="flex items-center gap-1">
+                <Star className="h-3.5 w-3.5 fill-orange text-orange" />
+                <span className="text-xs font-semibold text-muted-foreground">Top Pick</span>
+              </div>
+            </a>
           ))}
+        </div>
+      </section>
+
+      {/* Top Casinos */}
+      <section className="bg-muted py-8">
+        <div className="container">
+          <SectionTitle title="🏆 Top Casinos Online" subtitle="Los mejores casinos verificados y con licencia para LATAM" />
+          <div className="mt-5 grid gap-4">
+            {casinos.map((c) => (
+              <CasinoCard key={c.rank} casino={c} />
+            ))}
+          </div>
         </div>
       </section>
 
