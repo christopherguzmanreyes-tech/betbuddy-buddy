@@ -33,22 +33,30 @@ export const brands: CasinoBrand[] = [
   { name: "Betnacional", slug: "betnacional", logo: logoBetnacional, color: "#2eaa4a" },
 ];
 
-export const casinos: Casino[] = [
-  { rank: 1, name: "1xBet", slug: "1xbet", tagline: "El casino más completo", rating: 9.8, bonus: "$500 USD + 150 Giros Gratis", bonusDetail: "Bono 100% en tu primer depósito hasta $500", methods: 10, games: 3000, hasApp: true, type: "casino" },
+/* Casinos con licencia gris que operan en todo LATAM */
+export const casinosLatam: Casino[] = [
+  { rank: 1, name: "1xBet", slug: "1xbet", tagline: "El casino más completo de LATAM", rating: 9.8, bonus: "$500 USD + 150 Giros Gratis", bonusDetail: "Bono 100% en tu primer depósito hasta $500", methods: 10, games: 3000, hasApp: true, type: "casino" },
   { rank: 2, name: "1Win", slug: "1win", tagline: "Casino y apuestas todo en uno", rating: 9.5, bonus: "$1,000 USD en 4 depósitos", bonusDetail: "Hasta 500% de bono en tus primeros 4 depósitos", methods: 8, games: 2500, hasApp: true, type: "casino" },
-  { rank: 3, name: "BC.Game", slug: "bcgame", tagline: "Casino crypto líder", rating: 9.3, bonus: "Hasta 360% en bonos", bonusDetail: "Acepta Bitcoin, Ethereum y más criptomonedas", methods: 12, games: 5000, hasApp: true, type: "casino" },
-  { rank: 4, name: "Caliente", slug: "caliente", tagline: "El favorito de México", rating: 9.0, bonus: "$3,000 MXN", bonusDetail: "Bono de bienvenida + giros gratis", methods: 6, games: 1500, hasApp: true, type: "casino" },
-  { rank: 5, name: "Betnacional", slug: "betnacional", tagline: "Casino confiable en LATAM", rating: 8.8, bonus: "R$500 en bono", bonusDetail: "100% en tu primer depósito", methods: 5, games: 800, hasApp: true, type: "casino" },
+  { rank: 3, name: "Caliente", slug: "caliente", tagline: "El favorito de México y LATAM", rating: 9.0, bonus: "$3,000 MXN", bonusDetail: "Bono de bienvenida + giros gratis", methods: 6, games: 1500, hasApp: true, type: "casino" },
+  { rank: 4, name: "Betnacional", slug: "betnacional", tagline: "Casino confiable en LATAM", rating: 8.8, bonus: "R$500 en bono", bonusDetail: "100% en tu primer depósito", methods: 5, games: 800, hasApp: true, type: "casino" },
 ];
 
-export const apuestas: Casino[] = [
-  { rank: 1, name: "1xBet", slug: "1xbet", tagline: "La mejor casa de apuestas", rating: 9.8, bonus: "$500 USD Freebet", bonusDetail: "Apuesta gratis en tu primer evento", methods: 10, games: 500, hasApp: true, type: "apuestas" },
-  { rank: 2, name: "Caliente", slug: "caliente", tagline: "Apuestas en México", rating: 9.2, bonus: "$2,000 MXN", bonusDetail: "Freebet de bienvenida", methods: 6, games: 400, hasApp: true, type: "apuestas" },
-  { rank: 3, name: "1Win", slug: "1win", tagline: "Apuestas deportivas premium", rating: 9.0, bonus: "$1,000 USD", bonusDetail: "Bono 500% primer depósito", methods: 8, games: 350, hasApp: true, type: "apuestas" },
+/* Casas de apuestas con licencia gris que operan en todo LATAM */
+export const apuestasLatam: Casino[] = [
+  { rank: 1, name: "1xBet", slug: "1xbet", tagline: "La mejor casa de apuestas global", rating: 9.8, bonus: "$500 USD Freebet", bonusDetail: "Apuesta gratis en tu primer evento", methods: 10, games: 500, hasApp: true, type: "apuestas" },
+  { rank: 2, name: "1Win", slug: "1win", tagline: "Apuestas deportivas premium", rating: 9.5, bonus: "$1,000 USD", bonusDetail: "Bono 500% primer depósito", methods: 8, games: 350, hasApp: true, type: "apuestas" },
+  { rank: 3, name: "Caliente", slug: "caliente", tagline: "Apuestas deportivas en México y LATAM", rating: 9.2, bonus: "$2,000 MXN", bonusDetail: "Freebet de bienvenida", methods: 6, games: 400, hasApp: true, type: "apuestas" },
+  { rank: 4, name: "Betnacional", slug: "betnacional", tagline: "Apuestas confiables en Brasil y LATAM", rating: 8.7, bonus: "R$300 Freebet", bonusDetail: "Apuesta gratis en tu primer depósito", methods: 5, games: 300, hasApp: true, type: "apuestas" },
 ];
 
-export const bonos: Casino[] = [
-  { rank: 1, name: "BC.Game", slug: "bcgame", tagline: "Mejores bonos crypto", rating: 9.5, bonus: "Hasta 360% en 4 depósitos", bonusDetail: "El bono más generoso del mercado", methods: 12, games: 5000, hasApp: true, type: "bonos" },
-  { rank: 2, name: "1Win", slug: "1win", tagline: "Bono masivo", rating: 9.3, bonus: "$1,000 USD", bonusDetail: "500% repartido en 4 depósitos", methods: 8, games: 2500, hasApp: true, type: "bonos" },
-  { rank: 3, name: "1xBet", slug: "1xbet", tagline: "Bono + giros gratis", rating: 9.0, bonus: "$500 USD + 150 Giros", bonusDetail: "Rollover x35", methods: 10, games: 3000, hasApp: true, type: "bonos" },
+/* Mejores cripto casinos */
+export const cryptoCasinos: Casino[] = [
+  { rank: 1, name: "BC.Game", slug: "bcgame", tagline: "Casino crypto #1 en LATAM", rating: 9.5, bonus: "Hasta 360% en 4 depósitos", bonusDetail: "Acepta BTC, ETH, DOGE y 100+ criptos", methods: 12, games: 5000, hasApp: true, type: "casino" },
+  { rank: 2, name: "1xBet", slug: "1xbet", tagline: "Casino completo con cripto", rating: 9.3, bonus: "$500 USD en BTC", bonusDetail: "Depósita con Bitcoin y recibe bono 100%", methods: 10, games: 3000, hasApp: true, type: "casino" },
+  { rank: 3, name: "1Win", slug: "1win", tagline: "Apuestas y casino con cripto", rating: 9.0, bonus: "$1,000 USD en cripto", bonusDetail: "Acepta BTC, ETH, USDT", methods: 8, games: 2500, hasApp: true, type: "casino" },
 ];
+
+// Keep old exports for backward compatibility
+export const casinos = casinosLatam;
+export const apuestas = apuestasLatam;
+export const bonos = cryptoCasinos;

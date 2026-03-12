@@ -1,7 +1,7 @@
 import { useState } from "react";
 import SectionTitle from "@/components/SectionTitle";
 import CasinoCard from "@/components/CasinoCard";
-import { casinos, apuestas, bonos, brands } from "@/data/casinos";
+import { casinosLatam, apuestasLatam, cryptoCasinos, brands } from "@/data/casinos";
 import heroBg from "@/assets/hero-bg.jpg";
 import { ChevronDown, Search, Star } from "lucide-react";
 
