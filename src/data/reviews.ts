@@ -30,6 +30,11 @@ export interface CasinoReview {
   gameCategories: { name: string; count: number; icon: string }[];
   paymentMethods: string[];
   faqs: { question: string; answer: string }[];
+  broOpinion: {
+    summary: string;
+    ratings: { category: string; score: number; comment: string }[];
+    verdict: string;
+  };
   rating: number;
   minDeposit: string;
   withdrawalTime: string;
