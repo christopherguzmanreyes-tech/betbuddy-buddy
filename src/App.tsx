@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import CountryPage from "./pages/CountryPage";
 import ListPage from "./pages/ListPage";
 import CasinosPage from "./pages/CasinosPage";
+import CasinoReviewPage from "./pages/CasinoReviewPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
