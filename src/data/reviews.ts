@@ -30,6 +30,11 @@ export interface CasinoReview {
   gameCategories: { name: string; count: number; icon: string }[];
   paymentMethods: string[];
   faqs: { question: string; answer: string }[];
+  broOpinion: {
+    summary: string;
+    ratings: { category: string; score: number; comment: string }[];
+    verdict: string;
+  };
   rating: number;
   minDeposit: string;
   withdrawalTime: string;
@@ -117,6 +122,20 @@ export const casinoReviews: Record<string, CasinoReview> = {
       { question: "¿Qué requisitos tiene el bono de bienvenida?", answer: "El bono de bienvenida es del 100% sobre tu primer depósito. Debes hacer apuestas acumuladas con al menos 3 eventos con cuotas mínimas de 1.40 para liberar el bono. El rollover es x5." },
       { question: "¿Puedo jugar en 1xBet con criptomonedas?", answer: "Sí, 1xBet acepta Bitcoin, Ethereum, USDT, Litecoin y más de 30 criptomonedas. Los depósitos y retiros con crypto suelen ser los más rápidos." },
     ],
+    broOpinion: {
+      summary: "1xBet es de los casinos más completos que he probado en LATAM. La cantidad de juegos es brutal, los métodos de pago locales funcionan bien y el bono de bienvenida es competitivo. Eso sí, la interfaz puede abrumar al principio porque tiene DEMASIADAS opciones. Pero una vez que le agarras la onda, es difícil irse a otro lado.",
+      ratings: [
+        { category: "Variedad de juegos", score: 10, comment: "Más de 3,000 juegos, imposible aburrirse. Tienen de todo: slots, mesa, en vivo, crash games." },
+        { category: "Bonos y promociones", score: 9, comment: "Bono de bienvenida sólido y el rollover x5 es de los más bajos. Además tienen promos constantes." },
+        { category: "Métodos de pago", score: 9, comment: "OXXO, SPEI, PIX, PSE, cripto… tienen todo lo que necesitas según tu país." },
+        { category: "Velocidad de retiros", score: 8, comment: "Con cripto es rápido, pero con métodos bancarios puede tardar 48-72h. No es lo más rápido." },
+        { category: "App móvil", score: 9, comment: "La app para Android funciona muy bien. En iOS depende del país pero la versión web mobile es buena." },
+        { category: "Atención al cliente", score: 8, comment: "Chat 24/7 en español, responden rápido aunque a veces con respuestas genéricas." },
+        { category: "Confiabilidad", score: 8, comment: "Llevan desde 2007, eso dice mucho. Licencia de Curazao no es la mejor, pero nunca he tenido pedos con pagos." },
+        { category: "Experiencia de usuario", score: 7, comment: "La plataforma tiene tanto contenido que al principio te pierdes. Podrían simplificar la navegación." },
+      ],
+      verdict: "Si buscas un casino todo-en-uno con la mayor variedad en LATAM, 1xBet es tu mejor opción. No es perfecto en UX, pero en contenido y pagos es difícil de superar. El ApostaBro le da un 9.8/10. 🔥",
+    },
     rating: 9.8,
     minDeposit: "$1 USD",
     withdrawalTime: "24-72 horas",
@@ -175,6 +194,20 @@ export const casinoReviews: Record<string, CasinoReview> = {
       { question: "¿Cómo funciona el bono de 500%?", answer: "El bono se divide en 4 depósitos: 200% en el primero, 150% en el segundo, 100% en el tercero y 50% en el cuarto. El monto máximo varía por país." },
       { question: "¿1Win tiene app?", answer: "Sí, 1Win tiene app para Android e iOS con todas las funciones de la versión web." },
     ],
+    broOpinion: {
+      summary: "1Win llegó pegando fuerte con ese bono de 500%. La verdad es que para ser relativamente nuevo, tiene una plataforma bien hecha. Los juegos exclusivos como Lucky Jet están entretenidos, pero la variedad general todavía no le llega a los grandes. Vale la pena si quieres maximizar tu primer depósito.",
+      ratings: [
+        { category: "Variedad de juegos", score: 8, comment: "Tienen 2,500 juegos, no está mal pero se queda corto vs 1xBet o BC.Game." },
+        { category: "Bonos y promociones", score: 10, comment: "500% en 4 depósitos es una locura. Eso sí, el rollover x50 en casino es alto." },
+        { category: "Métodos de pago", score: 8, comment: "Los básicos están: SPEI, PIX, cripto. Faltan algunos métodos locales." },
+        { category: "Velocidad de retiros", score: 8, comment: "Con cripto es rápido, métodos bancarios tardan un poco más." },
+        { category: "App móvil", score: 8, comment: "Funcional y limpia, nada del otro mundo pero cumple." },
+        { category: "Atención al cliente", score: 7, comment: "A veces tardan en responder, puede mejorar." },
+        { category: "Confiabilidad", score: 7, comment: "Marca más nueva (2016), licencia Curazao. No he tenido problemas pero no tienen el historial de otros." },
+        { category: "Experiencia de usuario", score: 9, comment: "Interfaz moderna y limpia, fácil de navegar. De lo mejor en este aspecto." },
+      ],
+      verdict: "1Win es para el bro que quiere exprimir al máximo su presupuesto inicial con ese bono bestial de 500%. La plataforma es moderna y los juegos exclusivos están buenos. Le falta madurar en variedad pero va por buen camino. 9.5/10 🚀",
+    },
     rating: 9.5,
     minDeposit: "$1 USD",
     withdrawalTime: "24-48 horas",
@@ -231,6 +264,20 @@ export const casinoReviews: Record<string, CasinoReview> = {
       { question: "¿Necesito KYC en BC.Game?", answer: "Para montos pequeños no se requiere verificación. Para retiros grandes, puede solicitarse verificación de identidad." },
       { question: "¿Qué son los juegos provably fair?", answer: "Son juegos cuyo resultado se puede verificar matemáticamente como justo usando hashes criptográficos." },
     ],
+    broOpinion: {
+      summary: "BC.Game es EL casino para los crypto bros. Si ya manejas Bitcoin, Ethereum o cualquier cripto, no hay mejor opción. Los juegos provably fair te dan la tranquilidad de saber que no te están viendo la cara. El programa VIP es generoso y los retiros son prácticamente instantáneos. El único pero es si no sabes de cripto, porque ahí sí te vas a complicar.",
+      ratings: [
+        { category: "Variedad de juegos", score: 10, comment: "5,000+ juegos y siguen agregando. Los juegos originales de BC.Game están muy buenos." },
+        { category: "Bonos y promociones", score: 9, comment: "360% en 4 depósitos + programa VIP con rewards diarios. Muy completo." },
+        { category: "Métodos de pago", score: 7, comment: "100+ criptos es impresionante, pero si no usas cripto te complicas." },
+        { category: "Velocidad de retiros", score: 10, comment: "Retiros en minutos con cripto. De los más rápidos del mercado." },
+        { category: "App móvil", score: 8, comment: "La web mobile funciona bien, app nativa decente." },
+        { category: "Atención al cliente", score: 7, comment: "Soporte mayormente en inglés, español disponible pero limitado." },
+        { category: "Confiabilidad", score: 8, comment: "Provably fair es un plus enorme. Transparencia total en los juegos." },
+        { category: "Experiencia de usuario", score: 9, comment: "Plataforma bien diseñada, intuitiva y con buen dark mode." },
+      ],
+      verdict: "Si eres del mundo crypto, BC.Game es tu casa. Retiros instantáneos, juegos justos verificables y un programa VIP que sí vale la pena. Si no manejas cripto, considera aprender antes de entrar. 9.5/10 ₿🔥",
+    },
     rating: 9.5,
     minDeposit: "0.0001 BTC",
     withdrawalTime: "Casi instantáneo",
@@ -279,6 +326,20 @@ export const casinoReviews: Record<string, CasinoReview> = {
       { question: "¿Caliente es legal en México?", answer: "Sí, Caliente opera con permiso de la SEGOB, lo que lo convierte en uno de los pocos operadores 100% legales en México." },
       { question: "¿Puedo jugar en Caliente desde otro país?", answer: "No, Caliente solo está disponible para jugadores en México." },
     ],
+    broOpinion: {
+      summary: "Caliente es el rey indiscutible en México. Si eres mexicano y quieres apostar legal y seguro, no hay mejor opción. La licencia de SEGOB te da tranquilidad total. Los métodos de pago son 100% mexicanos y las promos de Liga MX están buenas. El catálogo de casino es más limitado que los offshore, pero la seguridad vale la pena.",
+      ratings: [
+        { category: "Variedad de juegos", score: 7, comment: "1,300 juegos, menos que otros pero tiene lo esencial. Fuerte en apuestas deportivas." },
+        { category: "Bonos y promociones", score: 7, comment: "Bonos más modestos que los offshore, pero son reales y sin letra chiquita tramposa." },
+        { category: "Métodos de pago", score: 10, comment: "OXXO, SPEI, 7-Eleven, Banco Azteca. Todo lo que usa un mexicano." },
+        { category: "Velocidad de retiros", score: 8, comment: "24-48h por SPEI, bastante bien para un casino regulado." },
+        { category: "App móvil", score: 8, comment: "App funcional, bien optimizada para el mercado mexicano." },
+        { category: "Atención al cliente", score: 9, comment: "WhatsApp, teléfono, chat. Soporte 100% en español mexicano." },
+        { category: "Confiabilidad", score: 10, comment: "Licencia SEGOB = máxima confianza. Llevan décadas operando en México." },
+        { category: "Experiencia de usuario", score: 8, comment: "Plataforma clara, enfocada en deportes. Fácil de usar." },
+      ],
+      verdict: "Para el bro mexicano que quiere apostar tranquilo y legal, Caliente es la opción #1. No tiene la variedad de un 1xBet pero te da la paz mental de saber que todo es 100% legal. 9.0/10 🇲🇽🏆",
+    },
     rating: 9.0,
     minDeposit: "$50 MXN",
     withdrawalTime: "24-48 horas",
@@ -326,6 +387,20 @@ export const casinoReviews: Record<string, CasinoReview> = {
       { question: "¿Betnacional acepta PIX?", answer: "Sí, PIX es el método principal de pago en Betnacional, con depósitos y retiros casi instantáneos." },
       { question: "¿Betnacional está disponible en español?", answer: "Betnacional está enfocado en el mercado brasileño y su plataforma está principalmente en portugués." },
     ],
+    broOpinion: {
+      summary: "Betnacional es la casa del apostador brasileño. PIX instantáneo para todo, enfoque total en el fútbol brasileño y una plataforma simple que va al grano. No es el casino más completo, pero para apuestas deportivas en Brasil cumple y sobra. Si eres de otro país, probablemente no es para ti.",
+      ratings: [
+        { category: "Variedad de juegos", score: 6, comment: "750 juegos, limitado en casino. Su fuerte son las apuestas deportivas." },
+        { category: "Bonos y promociones", score: 7, comment: "R$500 de bienvenida, está bien pero nada espectacular." },
+        { category: "Métodos de pago", score: 9, comment: "PIX lo es todo en Brasil y aquí funciona perfecto. Instantáneo." },
+        { category: "Velocidad de retiros", score: 10, comment: "PIX = retiro instantáneo. No hay nada más rápido." },
+        { category: "App móvil", score: 6, comment: "Solo web mobile, no tiene app nativa. Funciona pero podría mejorar." },
+        { category: "Atención al cliente", score: 7, comment: "WhatsApp y chat en portugués. Responden bien." },
+        { category: "Confiabilidad", score: 7, comment: "Marca nueva (2020) pero ha crecido rápido. Licencia Curazao." },
+        { category: "Experiencia de usuario", score: 8, comment: "Simple, directa, sin complicaciones. Hecha para Brasil." },
+      ],
+      verdict: "Betnacional es para el bro brasileño que quiere apostar en el Brasileirão con PIX. Simple, rápido y enfocado. No busques variedad de casino aquí, pero para deportes en Brasil es muy sólido. 8.8/10 🇧🇷⚽",
+    },
     rating: 8.8,
     minDeposit: "R$1",
     withdrawalTime: "Instantáneo con PIX",

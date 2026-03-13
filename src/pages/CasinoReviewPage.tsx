@@ -289,6 +289,59 @@ export default function CasinoReviewPage() {
         </div>
       </section>
 
+      {/* Opinión del Bro */}
+      <section className="container py-8">
+        <SectionTitle title={`🧢 La Opinión del ApostaBro sobre ${review.name}`} subtitle="Lo que realmente piensa el bro después de probarlo a fondo" />
+        
+        {/* Summary */}
+        <div className="mt-5 rounded-xl border border-orange/30 bg-card p-5 md:p-6">
+          <div className="flex items-start gap-4">
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-orange/20 text-2xl">
+              🧢
+            </div>
+            <div>
+              <p className="font-heading text-sm font-bold text-orange">El ApostaBro dice:</p>
+              <p className="mt-2 text-sm leading-relaxed text-foreground/80 italic">
+                "{review.broOpinion.summary}"
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Category ratings */}
+        <div className="mt-5 grid gap-3 sm:grid-cols-2">
+          {review.broOpinion.ratings.map((r) => (
+            <div key={r.category} className="rounded-xl border border-border bg-card p-4">
+              <div className="flex items-center justify-between">
+                <h4 className="font-heading text-sm font-bold text-foreground">{r.category}</h4>
+                <div className="flex items-center gap-1.5">
+                  <span className={`font-heading text-lg font-black ${r.score >= 9 ? "text-accent" : r.score >= 7 ? "text-orange" : "text-destructive"}`}>
+                    {r.score}
+                  </span>
+                  <span className="text-xs text-muted-foreground">/10</span>
+                </div>
+              </div>
+              {/* Score bar */}
+              <div className="mt-2 h-2 overflow-hidden rounded-full bg-muted">
+                <div
+                  className={`h-full rounded-full transition-all ${r.score >= 9 ? "bg-accent" : r.score >= 7 ? "bg-orange" : "bg-destructive"}`}
+                  style={{ width: `${r.score * 10}%` }}
+                />
+              </div>
+              <p className="mt-2 text-xs text-muted-foreground">{r.comment}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Verdict */}
+        <div className="mt-5 rounded-xl bg-dark-surface p-5 md:p-6">
+          <p className="text-xs font-semibold uppercase tracking-wider text-orange">Veredicto Final del Bro</p>
+          <p className="mt-2 font-heading text-base font-bold leading-relaxed text-dark-surface-foreground md:text-lg">
+            {review.broOpinion.verdict}
+          </p>
+        </div>
+      </section>
+
       {/* Juegos */}
       <section className="container py-8">
         <SectionTitle title={`🎮 Juegos en ${review.name}`} subtitle="Categorías y variedad de juegos disponibles" />
