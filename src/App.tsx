@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import CountryPage from "./pages/CountryPage";
 import ListPage from "./pages/ListPage";
 import CasinosPage from "./pages/CasinosPage";
+import CasinoReviewPage from "./pages/CasinoReviewPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +25,7 @@ const App = () => (
             <Route path="/pais/:codigo" element={<CountryPage />} />
             <Route path="/paises" element={<ListPage />} />
             <Route path="/casinos" element={<CasinosPage />} />
+            <Route path="/casino/:slug" element={<CasinoReviewPage />} />
             <Route path="/apuestas" element={<ListPage />} />
             <Route path="/bonos" element={<ListPage />} />
           </Route>
